@@ -1,0 +1,5 @@
+order_date,customer_id,customer_name,product,category,quantity,unit_price,region
+2026-11-01,C1001,Aarav Sharma,Wireless Headphones,Electronics,1,2499,Hyderabad
+2026-11-02,C1002,Diya Patel,Running Shoes,Fashion,2,2299,Bengaluru
+2026-11-03,C1001,Aarav Sharma,Smart Watch,Electronics,1,3999,Hyderabad
+2026-11-04,C1003,Ishaan Reddy,Water Bottle,Home & Living,3,499,Chennai

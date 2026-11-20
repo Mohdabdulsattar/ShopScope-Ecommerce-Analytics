@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}ShopScope{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head>
+<body><div class="app-shell"><aside class="sidebar"><a class="brand" href="/"><span class="brand-icon">S</span><span>shop<span class="brand-accent">scope</span><small>COMMERCE INTELLIGENCE</small></span></a>
+<div class="nav-label">WORKSPACE</div><a class="nav-item {% if request.path=='/' %}active{% endif %}" href="/"><span>▦</span> Overview</a><a class="nav-item {% if request.path=='/customers' %}active{% endif %}" href="/customers"><span>♙</span> Customers</a><a class="nav-item {% if request.path=='/products' %}active{% endif %}" href="/products"><span>◇</span> Products</a>
+<div class="sidebar-bottom"><div class="live-dot"></div><span>Analytics engine online</span><small>DEMO DATASET · LIVE LOCAL DB</small></div></aside>
+<main class="main"><header class="topbar"><div><div class="eyebrow">BUSINESS INTELLIGENCE / 2026</div><h1>{% block heading %}Overview{% endblock %}</h1></div><div class="top-actions"><span class="status"><i></i> System operational</span><a class="export-btn" href="/export">↓ Export CSV</a><div class="avatar">SS</div></div></header>
+{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}{% for category,message in messages %}<div class="flash {{category}}">{{message}}</div>{% endfor %}{% endif %}{% endwith %}
+{% block content %}{% endblock %}<footer>© 2026 ShopScope Analytics <span>Built for smarter commerce decisions</span></footer></main></div></body></html>
